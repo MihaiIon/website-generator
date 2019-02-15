@@ -1,0 +1,50 @@
+// ==========================================================================
+// Settings / Config / Colors
+// ==========================================================================
+
+// Palette
+// =============================================================================
+$white: #ffffff;
+$black: #000000;
+$gray: rgb(216, 225, 231);
+$gray-light: darken($white, 4%);
+$gray-dark: #888888;
+$gray-darker: rgb(37, 37, 37);
+
+// Specific
+// =============================================================================
+// Main
+// $main-color: rgb(74, 149, 195);
+// $main-color-light: lighten($main-color, 40%);
+// $main-color-dark: darken($main-color, 10%);
+// $main-color-gray: #dae1e9;
+
+// Link
+$link-color: #198d7e;
+$link-focus-color: $link-color;
+$link-hover-color: darken($link-color, 10%);
+
+// Selection
+$selection-text-color: $link-color;
+$selection-background-color: #ffffff;
+
+// Code colors
+$error: #dc384a;
+$error-dark: darken($error, 10%);
+$warning: #e6b21e;
+$warning-dark: darken($warning, 10%);
+$success: #3bbb6a;
+$success-dark: darken($success, 10%);
+$info: #2999d1;
+$info-dark: darken($info, 10%);
+
+// Main
+$main: #04497a;
+$accent: #b4490b;
+
+// Social Colors
+// =============================================================================
+$facebook-color: #3b5998;
+$instagram-color: #e1306c;
+$youtube-color: #cd201f;
+$twitter-color: #1da1f2;

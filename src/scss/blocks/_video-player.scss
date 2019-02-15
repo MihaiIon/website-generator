@@ -1,0 +1,41 @@
+// ======================================================
+// Blocks / Video Player
+// ======================================================
+
+// https://stackoverflow.com/questions/49393838/how-to-make-reactplayer-scale-with-height-and-width
+
+$video-player--ratio: 9 / 16 * 100%;
+$video-player--icon-size: $unit * 2;
+
+.b-video-player {
+  position: relative;
+  height: auto; // Reset height
+  .react-player__preview {
+    padding-top: $video-player--ratio; // Percentage ratio for 16:9
+  }
+  .react-player__shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 0 !important;
+    background: rgba($color: $black, $alpha: 0.35) !important;
+  }
+  .react-player__play-icon {
+    // width: rem($video-player--icon-size) !important;
+    // height: rem($video-player--icon-size) !important;
+    border-width: rem($video-player--icon-size) 0 rem($video-player--icon-size)
+      rem($video-player--icon-size * 1.45) !important;
+  }
+}
+
+.b-video-player_inner {
+  padding-top: $video-player--ratio; // Percentage ratio for 16:9
+  position: relative; // Set to relative
+  & > div {
+    position: absolute; // Scaling will occur since parent is relative now
+    top: 0;
+    left: 0;
+  }
+}

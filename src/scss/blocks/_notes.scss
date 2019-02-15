@@ -1,0 +1,19 @@
+// ======================================================
+// Blocks / Notes
+// ======================================================
+
+.b-notes {
+  padding: rem($unit * 1.5);
+  border-left: solid 6px $gray;
+  background-color: rgba($color: $gray-light, $alpha: 0.5);
+}
+
+.b-notes_h3 {
+  color: $gray-darker;
+}
+
+.b-notes_list {
+  list-style-type: square;
+  padding-left: rem($unit);
+  font-size: rem($content--font-size * 0.85);
+}

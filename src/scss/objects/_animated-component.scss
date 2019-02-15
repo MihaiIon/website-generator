@@ -1,0 +1,32 @@
+// ======================================================
+// Objects / Animated-component
+// ======================================================
+.o-animated {
+  position: relative;
+  transition: $speed $easing;
+  // Animations
+  &,
+  &.-hide {
+    opacity: 0;
+  }
+  &.-animate.-show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  &.-show.-fade-in-up,
+  &.-hide.-fade-out-down {
+    transform: translateY($animated-component--translation);
+  }
+  &.-show.-fade-in-down,
+  &.-hide.-fade-out-up {
+    transform: translateY(-$animated-component--translation);
+  }
+  &.-show.-fade-in-left,
+  &.-hide.-fade-out-right {
+    transform: translateX(-$animated-component--translation);
+  }
+  &.-show.-fade-in-right,
+  &.-hide.-fade-out-left {
+    transform: translateX($animated-component--translation);
+  }
+}

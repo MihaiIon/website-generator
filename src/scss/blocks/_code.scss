@@ -1,0 +1,17 @@
+// ======================================================
+// Blocks / Code
+// ======================================================
+
+.b-code {
+}
+
+.b-code_pre {
+  padding: rem($unit * 2) !important;
+  margin-bottom: rem($unit * 3.5) !important;
+
+  border: none !important;
+  border-radius: 4px !important;
+  font-size: rem($code--font-size) !important;
+
+  background-color: rgb(30, 30, 30) !important;
+}

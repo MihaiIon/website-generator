@@ -1,0 +1,26 @@
+// =====================================================
+// Components / Page
+// =====================================================
+
+// App
+// ======================================================
+
+.c-app {
+  position: relative;
+  &.-crop {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+// Page
+// ======================================================
+
+.c-page {
+  position: relative;
+  opacity: 0;
+  transition: opacity $page--speed ease-out;
+  &.-animate {
+    opacity: 1;
+  }
+}

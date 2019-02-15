@@ -1,0 +1,64 @@
+// ======================================================
+// Blocks / Construction Zone
+// ======================================================
+
+.b-construction-zone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: rem($construction-zone--height);
+  width: rem($construction-zone--width);
+
+  margin: 0 auto;
+  padding: rem($unit * 2);
+
+  text-align: center;
+  color: $warning-dark;
+  background-color: #ffedbc;
+
+  &:hover {
+    .b-construction-zone_icon {
+      animation: construction-zone-icon $speed ease-out infinite;
+    }
+    .b-construction-zone_text {
+      animation: construction-zone-text $speed alternate infinite;
+    }
+  }
+}
+
+.b-construction-zone_icon {
+  margin-right: rem($unit);
+  font-size: rem($construction-zone--icon-size);
+}
+
+.b-construction-zone_text {
+  margin: 0;
+  font-size: rem($construction-zone--text-size);
+  font-weight: $normal;
+  text-transform: uppercase;
+}
+
+@keyframes construction-zone-icon {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-$construction-zone--icon-rotation);
+  }
+  75% {
+    transform: rotate($construction-zone--icon-rotation);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes construction-zone-text {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(4px);
+  }
+}

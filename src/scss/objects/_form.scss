@@ -1,0 +1,58 @@
+// ======================================================
+// Objects / Form
+// ======================================================
+
+// General
+// ======================================================
+
+.o-form {
+}
+
+.o-form-group {
+  &:not(:last-child) {
+    margin-bottom: rem($unit / 2);
+  }
+}
+
+// Label
+// ======================================================
+
+.o-label {
+  font-size: rem(16px);
+  color: white;
+}
+
+.o-label_text {
+  font-size: rem(14px);
+}
+
+.o-label_icon {
+  font-size: rem(10px);
+  margin-left: rem($unit / 4);
+}
+
+// Input
+// ======================================================
+
+.o-input,
+.o-input_p {
+  padding: rem($unit / 3) 0;
+  color: $gray-dark;
+}
+
+.o-input_p {
+  margin: 0;
+  line-height: normal;
+}
+
+.o-input_underline {
+  width: 0%;
+  margin: 0;
+  border-width: 1px;
+  border-color: darken($gray-darker, 10%);
+  transition: width $speed * 0.75 ease-out;
+  .-focused & {
+    width: 100%;
+    transition-duration: $speed * 1.5;
+  }
+}

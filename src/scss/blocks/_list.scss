@@ -1,0 +1,15 @@
+// ======================================================
+// Blocks / List
+// ======================================================
+
+.b-list {
+  margin-left: rem($unit * 2);
+  margin-bottom: rem($unit);
+  font-size: rem($content--font-size);
+}
+
+.b-list_li {
+  &:not(:last-child) {
+    margin-bottom: rem($unit / 2);
+  }
+}

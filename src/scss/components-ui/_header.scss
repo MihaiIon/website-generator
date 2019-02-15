@@ -1,0 +1,67 @@
+// ======================================================
+// Components-ui / Header
+// ======================================================
+
+.c-header {
+  width: 100%;
+  position: relative;
+}
+
+.c-header_jumbotron {
+  position: relative;
+  height: rem($header--height);
+
+  color: $white;
+  text-align: center;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  @media (max-width: $to-small) {
+    height: 100vh;
+  }
+}
+
+.c-header_overlay {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba($color: $black, $alpha: 0.5);
+}
+
+.c-header_h1,
+.c-header_h2 {
+  font-weight: $thin;
+  transition-timing-function: ease-out;
+  opacity: 0;
+  transform: translateY(80%);
+  .-animate & {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.c-header_h1 {
+  margin-top: 0;
+  margin-bottom: rem($unit / 2);
+  font-size: rem($header--h1-size);
+  line-height: rem($header--h1-line-height);
+  transition-duration: $header--h1-speed;
+  transition-delay: $page--speed;
+
+  @media (max-width: $to-small) {
+    font-size: rem($header--h1-size * 0.7);
+    line-height: rem($header--h1-line-height * 0.7);
+  }
+}
+
+.c-header_h2 {
+  margin: 0;
+  font-size: rem($header--h2-size);
+  color: $gray-light;
+  transition-duration: $header--h2-speed;
+  transition-delay: $header--h2-delay;
+}

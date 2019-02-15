@@ -1,0 +1,36 @@
+// ======================================================
+// Objects / Wrapper
+// ======================================================
+
+.o-wrapper {
+  width: rem($wrapper--width);
+  margin: 0 auto;
+  @media (max-width: $to-medium) {
+    width: 100%;
+    padding: 0 rem($unit * 3);
+  }
+  @media (max-width: $to-small) {
+    padding: 0 rem($unit * 2);
+  }
+  @media (max-width: $to-tiny) {
+    padding: 0 rem($unit);
+  }
+}
+
+.o-section {
+  padding: rem($unit * 4) 0;
+  &:nth-child(even) {
+    background-color: $white;
+  }
+}
+
+.o-overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  overflow: hidden;
+  position: absolute;
+  background-color: rgba($color: $black, $alpha: 0.6);
+}

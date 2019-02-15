@@ -1,0 +1,136 @@
+// ======================================================
+// Components / Navigation
+// ======================================================
+
+// General
+// ======================================================
+
+.c-navigation {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: rem($navigation--height);
+
+  transform: translateY(rem(-$navigation--height));
+  background-color: transparent;
+  transition: height $speed $easing, background-color $speed $easing,
+    transform $navigation--speed $navigation--delay ease-out,
+    opacity $navigation--speed $navigation--delay ease-out;
+  &.-animate {
+    transform: translateY(0);
+  }
+  &.-shrink {
+    height: rem($navigation--height-shrink);
+    background-color: rgba($color: $black, $alpha: 0.96);
+  }
+}
+
+.c-navigation_wrapper,
+.c-navigation_logo,
+.c-navigation_list,
+.c-navigation_item,
+.c-navigation_burger-menu {
+  height: 100%;
+}
+
+// Logo
+// ======================================================
+
+.c-navigation_logo {
+  float: left;
+  display: flex;
+  align-items: center;
+}
+
+.c-navigation_logo_img {
+  height: rem($navigation--height * 0.5);
+  transition: height $speed $easing;
+  .-shrink & {
+    height: rem($navigation--height-shrink * 0.5);
+  }
+}
+
+// Navigation's Links
+// ======================================================
+
+.c-navigation_list {
+  float: right;
+  list-style-type: none;
+  @media (max-width: $to-small) {
+    display: none;
+  }
+}
+
+.c-navigation_item,
+.c-navigation_burger-menu {
+  cursor: pointer;
+  padding: 0 rem($unit * 2);
+  color: rgba($color: $white, $alpha: 0.6);
+  .-shrink & {
+    color: lighten($main, 60%);
+  }
+
+  background-color: transparent;
+  transition: $speed $easing;
+
+  &:hover,
+  &:focus,
+  &.-active {
+    color: $white;
+  }
+  &:focus,
+  &:hover,
+  &.-active {
+    background-color: rgba($color: $black, $alpha: 0.15);
+    .-shrink & {
+      background-color: rgba($color: $main, $alpha: 0.25);
+    }
+  }
+}
+
+.c-navigation_item {
+  float: left;
+  line-height: rem($navigation--height);
+  .-shrink & {
+    line-height: rem($navigation--height-shrink);
+  }
+  &:not(:last-child) {
+    border-right: solid rgba($color: $white, $alpha: 0.05) 1px;
+    .-shrink & {
+      border-right-color: rgba($color: $white, $alpha: 0.1);
+    }
+  }
+}
+
+// Burger Menu
+// ======================================================
+
+.c-navigation_burger-menu {
+  float: right;
+  line-height: rem($navigation--height * 1.25);
+  .-shrink & {
+    line-height: rem($navigation--height-shrink * 1.25);
+  }
+  @media (min-width: $from-small) {
+    display: none;
+  }
+}
+
+.c-navigation_burger-menu_icon {
+  font-size: rem($navigation--burger-menu-icon-size);
+}
+
+// Sidebar
+// ======================================================
+
+.c-navigation_header {
+  text-align: center;
+  padding: rem($unit * 3) 0;
+  background-color: darken($main, 12%);
+}
+.c-navigation_header_logo {
+  height: rem($sidebar--logo-height);
+}

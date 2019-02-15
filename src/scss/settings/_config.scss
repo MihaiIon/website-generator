@@ -1,0 +1,64 @@
+// ==========================================================================
+// Settings / Config
+// ==========================================================================
+
+// Context
+// =============================================================================
+// The current stylesheet context. Available values: frontend, editor.
+$context: frontend !default;
+
+// Path is relative to the stylesheets directory.
+$assets-path: "../" !default;
+
+// Typefaces
+// =============================================================================
+$font-sans-serif: sans-serif;
+$font-roboto: "Roboto";
+
+// Typography
+// =============================================================================
+// Base
+$font-size: 14px;
+$line-height: 24px / $font-size;
+$font-family: $font-roboto, $font-sans-serif;
+$color: #222222;
+// Headings
+$font-size-h1: 55px !default;
+$font-size-h2: 40px !default;
+$font-size-h3: 24px !default;
+$line-height-h: $line-height;
+// Weights
+$thin: 200;
+$light: 300;
+$normal: 400;
+$medium: 500;
+$bold: 700;
+
+// Transitions
+// =============================================================================
+$speed: 0.3s;
+$easing: linear;
+
+// Spacing Units
+// =============================================================================
+$unit: 20px;
+$unit-large: 40px;
+
+// Container
+// ==========================================================================
+$container-width: 2000px;
+$padding: $unit;
+
+// Breakpoints
+// =============================================================================
+$from-tiny: 500px !default;
+$to-tiny: $from-tiny - 1 !default;
+$from-small: 750px !default;
+$to-small: $from-small - 1 !default;
+$from-medium: 1000px !default;
+$to-medium: $from-medium - 1 !default;
+$from-large: 1200px !default;
+$to-large: $from-large - 1 !default;
+$from-big: 1400px !default;
+$to-big: $from-big - 1 !default;
+$from-huge: 1600px !default;

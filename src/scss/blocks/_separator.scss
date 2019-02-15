@@ -1,0 +1,43 @@
+// ======================================================
+// Blocks / Separator
+// ======================================================
+
+.b-separator {
+  width: 100%;
+  text-align: center;
+  margin: rem($unit * 6) 0;
+  @media (max-width: $to-medium) {
+    margin: rem($unit * 4) 0;
+  }
+
+  &.-hr {
+    margin: rem($unit * 3) 0;
+    &.-small {
+      width: rem($hr--small-width);
+      margin: rem($unit * 2) auto;
+      border-top-color: lighten($gray, 5%);
+      @media (max-width: $to-medium) {
+        margin: rem($unit) 0;
+      }
+    }
+  }
+
+  &:hover > div {
+    transition-duration: $speed * 2;
+    transform: rotate(-45deg);
+  }
+}
+
+.b-separator_square {
+  display: inline-block;
+  width: rem($separator--square-size);
+  height: rem($separator--square-size);
+
+  transform: rotate(45deg);
+  transition: transform $speed / 2 ease-out;
+  background-color: $gray-darker;
+
+  &:not(:last-child) {
+    margin-right: rem($separator--square-space);
+  }
+}

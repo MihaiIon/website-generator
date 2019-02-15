@@ -1,0 +1,39 @@
+// ======================================================
+// Components-ui / Grid
+// ======================================================
+
+.c-grid {
+  border: solid $gray 1px;
+  background-color: $gray-light;
+}
+
+.c-grid_row {
+  padding: rem($unit) rem($unit * 2);
+  &:nth-child(even) {
+    background-color: $white;
+  }
+  &.-header {
+    color: $white;
+    font-weight: $bold;
+    background-color: $main;
+    > .c-grid_col:nth-child(1) {
+      padding-left: 0;
+    }
+  }
+}
+
+.c-grid_col {
+  font-size: rem($content--font-size);
+  &:nth-child(1) {
+    padding-left: rem($unit);
+  }
+  .-header & {
+    font-size: rem($content--font-size * 1.2);
+  }
+  &.-right {
+    text-align: right;
+  }
+  &.-center {
+    text-align: center;
+  }
+}

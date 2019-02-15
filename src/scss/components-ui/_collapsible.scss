@@ -1,0 +1,64 @@
+// ======================================================
+// Components-ui / Collapsible
+// ======================================================
+
+.c-collapsible {
+  width: 100%;
+  &:not(:first-child) {
+    border-top: solid lighten($color: $black, $amount: 18%) 1px;
+  }
+}
+
+// Toggle Button
+// ======================================================
+
+.c-collapsible_btn {
+  width: 100%;
+  padding: rem($unit / 2) rem($unit * 1.5);
+
+  text-align: left;
+
+  color: $gray;
+  background-color: lighten($color: $black, $amount: 10%);
+}
+
+.c-collapsible_text {
+  display: inline-block;
+  margin-bottom: rem($unit / 4);
+}
+
+.c-collapsible_icon {
+  position: relative;
+  top: rem(4px);
+
+  margin-right: rem($unit / 2);
+
+  font-size: rem(20px);
+
+  transition: transform $speed / 2 $easing;
+  transform: rotate(0deg);
+
+  .-toggled & {
+    transform: rotate(90deg);
+  }
+}
+
+// Body
+// ======================================================
+
+$collapsible--collapse-delay: $speed / 2;
+$collapsible--collapse-speed: $speed;
+
+.c-collapsible_body {
+  padding: rem($unit) rem($unit * 2);
+
+  opacity: 0;
+  transform: scaleY(0.01);
+  transition: opacity $collapsible--collapse-speed $collapsible--collapse-delay $easing,
+    transform $collapsible--collapse-speed $easing;
+
+  .-toggled & {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}

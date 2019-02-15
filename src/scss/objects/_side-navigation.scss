@@ -1,0 +1,57 @@
+// ======================================================
+// Objects / Side Navigation
+// ======================================================
+
+.o-side-navigation {
+  width: 100%;
+}
+
+.o-side-navigation_item {
+  position: relative;
+  height: rem($side-navigation--item-height);
+  overflow: hidden;
+  border-top: 1px solid $gray-light;
+  transition: transform $side-navigation--item-speed;
+  @for $i from 0 to 6 {
+    &:nth-child(#{$i}) {
+      transition-delay: ($i * $side-navigation--item-delay) + $sidebar--speed;
+    }
+  }
+  .o-sidebar.show & {
+    transform: translateX(0);
+  }
+  .o-sidebar.-close.-left & {
+    transform: translateX(-100%);
+  }
+  .o-sidebar.-close.-right & {
+    transform: translateX(100%);
+  }
+}
+
+.o-side-navigation_btn {
+  @include u-clearfix;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  font-weight: $light;
+  font-size: rem($side-navigation--font-size);
+  line-height: rem($side-navigation--item-height);
+
+  display: block;
+  box-sizing: border-box;
+
+  color: $black;
+  padding-left: 0;
+  transition: $speed $easing;
+
+  .o-side-navigation_item.-active & {
+    color: $main;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  &:hover,
+  .o-side-navigation_item.-active:hover & {
+    background-color: $gray-light;
+  }
+}

@@ -1,0 +1,46 @@
+// ======================================================
+// Components-ui / Spinner
+// ======================================================
+
+.c-spinner {
+  &.-animate {
+    transition-delay: 0;
+  }
+}
+
+.c-spinner,
+.c-spinner_inner,
+.c-spinner_icon {
+  border-radius: 50%;
+}
+
+.c-spinner,
+.c-spinner_icon {
+  position: relative;
+  width: rem($spinner--size);
+  height: rem($spinner--size);
+  border: solid rgba($color: $black, $alpha: 0.025) rem($spinner--border-width);
+}
+
+.c-spinner_inner {
+  position: absolute;
+  top: rem(-$spinner--border-width * 0.98);
+  left: rem(-$spinner--border-width * 0.98);
+
+  width: rem($spinner--size * 0.98);
+  height: rem($spinner--size * 0.98);
+  border-top: solid rgba($color: $black, $alpha: 0.12) 3px;
+
+  .-show & {
+    animation: spin $speed * 2 $easing infinite;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

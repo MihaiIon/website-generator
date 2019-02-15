@@ -1,0 +1,57 @@
+// ==========================================================================
+// Base / Page
+// ==========================================================================
+
+//
+// Simple page-level setup.
+//
+// 1. Set the default `font-size` and `line-height` for the entire project,
+//    sourced from our default variables.
+// 2. Set the default `background-color` for the entire project.
+// 3. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
+//    navigating between pages that do/do not have enough content to produce
+//    scrollbars naturally. This feature will only occur on mobile devices.
+// 4. Ensure the page always fills at least the entire height of the viewport.
+//
+html {
+  width: 100%;
+  overflow-y: scroll; /* [3] */
+  // overflow-y: scroll; /* [3] */
+  min-height: 100%; /* [4] */
+  color: $color;
+  font-family: $font-family;
+  line-height: $line-height; /* [1] */
+  background-color: $white; /* [2] */
+
+  @media (max-width: $to-medium) {
+    font-size: 12px;
+  }
+
+  @media (min-width: $from-medium) and (max-width: $to-big) {
+    font-size: 13px;
+  }
+
+  @media (min-width: $from-big) {
+    font-size: $font-size; /* [1] */
+  }
+}
+
+::selection {
+  background-color: $selection-background-color;
+  color: $selection-text-color;
+  text-shadow: none;
+}
+
+a {
+  @include u-hocus {
+    color: $link-hover-color;
+  }
+
+  color: $link-color;
+}
+
+ol,
+ul {
+  padding: 0;
+  margin: 0;
+}

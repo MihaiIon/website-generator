@@ -1,0 +1,17 @@
+// ======================================================
+// Components / Content
+// ======================================================
+
+.c-content {
+  position: relative;
+}
+
+.o-p,
+.b-list_li {
+  font-size: rem($content--font-size);
+  line-height: rem($content--line-height);
+  @media (max-width: $to-medium) {
+    font-size: rem($content--font-size * 1.1);
+    line-height: rem($content--line-height * 1.25);
+  }
+}

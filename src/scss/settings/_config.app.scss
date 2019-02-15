@@ -1,0 +1,85 @@
+// ==========================================================================
+// Settings / Config / Application
+// ==========================================================================
+
+// Objects
+// ======================================================
+
+$wrapper--width: 920px;
+$animated-component--translation: 50%;
+
+// Sidebar
+$sidebar--width: 300px;
+$sidebar--speed: $speed * 1.2;
+$sidebar--header-height: 300px;
+$sidebar--header-logo-height: $sidebar--header-height * 0.9;
+$sidebar--slide-in-speed: $speed * 2.5;
+$sidebar--slide-out-speed: $sidebar--slide-in-speed;
+$sidebar--logo-height: 60px;
+
+// Side Navigation
+$side-navigation--speed: $speed * 4;
+$side-navigation--item-height: 80px;
+$side-navigation--item-speed: $speed * 2.2;
+$side-navigation--item-delay: $speed / 4;
+$side-navigation--font-size: 20px;
+
+// Components
+// ======================================================
+
+// Page
+$page--speed: $speed * 2;
+
+// Blocks
+$content--font-size: 22px;
+$content--line-height: 35px;
+$hr--small-width: 380px;
+$image--height: 600px;
+$image--height-small: 280px;
+$separator--square-size: 12px;
+$separator--square-space: $unit * 1.5;
+$construction-zone--width: 500px;
+$construction-zone--height: 100px;
+$construction-zone--icon-size: 25px;
+$construction-zone--text-size: 18px;
+$construction-zone--icon-rotation: 8deg;
+$construction--zone-text-translation: 4px;
+$code--font-size: 20px;
+
+// Loading
+$loading--speed: $speed / 2;
+$loading--fade-out-speed: $speed;
+$spinner--size: 80px;
+$spinner--border-width: 2px;
+$spinner--speed: $speed * 2;
+
+// Header
+$header--height: 680px;
+$header--h1-line-height: 100px;
+$header--h1-size: 80px;
+$header--h2-size: 25px;
+$header--h1-speed: $speed * 3;
+$header--h2-speed: $speed * 2;
+$header--h2-delay: $page--speed + $header--h1-speed / 2.25;
+
+// Navigation
+$navigation--height: 90px;
+$navigation--height-shrink: 80px;
+$navigation--speed: $header--h2-speed;
+$navigation--delay: $header--h2-delay;
+$navigation--burger-menu-icon-size: 35px;
+
+// Quick Menu
+$quick-menu--link-font-size: $font-size * 1.5;
+$quick-menu--bullet-size: $quick-menu--link-font-size * 0.65;
+
+$quick-menu--link-speed: $speed;
+$quick-menu--bullet-speed: $speed * 1.15;
+
+$quick-menu--btn-size: $unit * 4;
+$quick-menu--btn-margin: $unit * 3;
+$quick-menu--1-1--size: $unit * 2;
+$quick-menu--2-1--size: $unit * 1.2;
+
+$quick-menu--scroll-margin-right: $quick-menu--btn-margin + $quick-menu--btn-size / 6.5;
+$quick-menu--scroll-margin-bottom: $quick-menu--btn-size + $quick-menu--btn-margin * 1.5;

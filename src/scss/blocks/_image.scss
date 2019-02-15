@@ -1,0 +1,24 @@
+// ======================================================
+// Blocks / Image
+// ======================================================
+
+.b-img {
+  text-align: center;
+}
+
+.b-img_asset {
+  width: 100%;
+  display: inline-block;
+  max-height: rem($image--height);
+  box-shadow: 0 0 rem($unit / 2) rgba($color: $black, $alpha: 0.4);
+
+  .b-img.-small & {
+    width: auto;
+    height: rem($image--height-small);
+  }
+}
+
+.b-img_caption {
+  font-size: rem($content--font-size * 0.9);
+  font-weight: 100;
+}
