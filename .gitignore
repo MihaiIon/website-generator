@@ -81,3 +81,5 @@ build/
 
 # Other directories
 public/assets/
+projects/.gitkeep
+projects/.gitignore
