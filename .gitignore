@@ -78,5 +78,6 @@ package-lock.json
 # Build files
 build/
 
-# Other directories
+# Other directories/files
 public/assets/
+config/default.js
