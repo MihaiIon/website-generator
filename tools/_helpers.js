@@ -52,7 +52,8 @@ module.exports.getProjects = () => {
   const pathToProjects = path.resolve(__dirname, "../projects/");
   return fs
     .readdirSync(pathToProjects)
-    .filter(name => fs.lstatSync(path.join(pathToProjects, name)).isDirectory());
+    .filter(name => fs.lstatSync(path.join(pathToProjects, name)).isDirectory())
+    .filter(name => name !== ".git");
 };
 
 // > Tool / Start
