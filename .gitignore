@@ -81,5 +81,10 @@ build/
 
 # Other directories
 public/assets/
-projects/.gitkeep
-projects/.gitignore
+
+# Projects
+projects/*
+!projects/blockFactory.js
+!projects/demo/
+
+
