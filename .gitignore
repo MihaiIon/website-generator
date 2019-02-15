@@ -81,4 +81,10 @@ build/
 
 # Other directories
 public/assets/
-projects/
+
+# Projects
+projects/*
+!projects/blockFactory.js
+!projects/demo/
+
+
