@@ -71,6 +71,7 @@ typings/
 
 # files
 package-lock.json
+config/default.js
 
 # Serverless directories
 .serverless
@@ -78,6 +79,5 @@ package-lock.json
 # Build files
 build/
 
-# Other directories/files
+# Other directories
 public/assets/
-config/default.js

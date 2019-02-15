@@ -49,10 +49,10 @@ module.exports.copyProjectAssetsToPublicFolder = () => {
  *
  */
 module.exports.getProjects = () => {
-  const PathToProjects = path.resolve(__dirname, "../projects/");
+  const pathToProjects = path.resolve(__dirname, "../projects/");
   return fs
-    .readdirSync(PathToProjects)
-    .filter(name => fs.lstatSync(path.join(PathToProjects, name)).isDirectory());
+    .readdirSync(pathToProjects)
+    .filter(name => fs.lstatSync(path.join(pathToProjects, name)).isDirectory());
 };
 
 // > Tool / Start
